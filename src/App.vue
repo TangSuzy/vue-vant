@@ -23,7 +23,8 @@ export default {
   }),
   methods:{
     onClickLeft(){
-      Toast('hello')
+      // Toast('hello')
+      window.history.go(-1);
     }
   }
 }
@@ -33,6 +34,7 @@ export default {
   .app{
     padding-top: 46px;
     overflow-x: hidden;
+    padding-bottom: 60px;
   }
   .header{
     background-color: skyblue;

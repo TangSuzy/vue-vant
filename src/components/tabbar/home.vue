@@ -24,10 +24,11 @@ export default {
     this.getLunBoTu();
   },
   methods: {
-    getLunBoTu() {
-      this.$http.get("http://localhost:5000/api/getlunbo").then(res => {
-        this.imgList = res.data.message;
-      });
+    async getLunBoTu() {
+      const res = await this.$http.get("api/getlunbo")
+      if(res.status ==200){
+        this.imgList = res.data.message
+      }
     }
   }
 };

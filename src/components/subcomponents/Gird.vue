@@ -1,11 +1,11 @@
 <template>
   <div class="demo-icon">
-    <div class="van-col" v-for="item in list" :key='item.imgUrl'>
+    <router-link class="van-col" v-for="item in list" :key='item.id' :to="item.path" >
       <i class="van-icon">
         <img :src="item.imgUrl" alt>
       </i>
       <span>{{item.title}}</span>
-    </div>
+    </router-link>
   
   </div>
 </template>
@@ -14,12 +14,12 @@
 export default {
   data: () => ({
     list:[
-      {path_to:'',title:'定位服务',imgUrl:'static/gird/menu1.png'},
-      {path_to:'',title:'点餐服务',imgUrl:'static/gird/menu2.png'},
-      {path_to:'',title:'商品管理',imgUrl:'static/gird/menu3.png'},
-      {path_to:'',title:'充值服务',imgUrl:'static/gird/menu4.png'},
-      {path_to:'',title:'精彩点评',imgUrl:'static/gird/menu5.png'},
-      {path_to:'',title:'菜单分类',imgUrl:'static/gird/menu6.png'},
+      {id:'1',path:'/home/newslist',title:'定位服务',imgUrl:'static/gird/menu1.png'},
+      {id:'2',path:'',title:'点餐服务',imgUrl:'static/gird/menu2.png'},
+      {id:'3',path:'',title:'商品管理',imgUrl:'static/gird/menu3.png'},
+      {id:'4',path:'',title:'充值服务',imgUrl:'static/gird/menu4.png'},
+      {id:'5',path:'',title:'精彩点评',imgUrl:'static/gird/menu5.png'},
+      {id:'6',path:'',title:'菜单分类',imgUrl:'static/gird/menu6.png'},
     ]
   })
 };

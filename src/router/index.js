@@ -5,7 +5,8 @@ import Home from '../components/tabbar/home.vue'
 import Member from '../components/tabbar/member.vue'
 import Cart from '../components/tabbar/cart.vue'
 import Search from '../components/tabbar/search.vue'
-
+import Newslist from '../components/subcomponents/Newslist.vue'
+import newsInfo from '../components/subcomponents/newsInfo.vue'
 Vue.use(Router)
 
 
@@ -35,6 +36,13 @@ export default new Router({
       name: 'Search',
       component:Search
     },
-
+    {
+      path:'/home/newslist',
+      component:Newslist
+    },
+    {
+      path:'/home/newsInfo/:id',
+      component:newsInfo
+    }
   ]
 })
