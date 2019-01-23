@@ -5,9 +5,7 @@
       <span class="time">发表时间：{{newsInfo.add_time}}</span>
       <span class="click">{{newsInfo.click}}次</span>
     </div>
-    <h3 class="fabiao">发表评论</h3>
-    <textarea :placeholder="newsInfo.content"></textarea>
-    <van-button class="btn" type="primary">提交评论</van-button>
+    <div class="artic">{{newsInfo.content}}</div>
     <Comment :id = "id"></Comment>
     
   </div>
@@ -61,30 +59,12 @@ export default {
       margin-right: 10px;
     }
  }
- textarea{
-   width: 95%;
-   display: block;
-   height: 88px;
-   font-size: 14px;
-   text-indent: 2em;
-   outline: none;
-   resize: none;
-   margin: 10px auto;
-   border: 1px solid #ccc;
-   padding-left: 10px;
-   box-sizing: border-box;
- }
- .btn{
-   width: 95%;
-   display: block;
-   margin: auto;
- }
- .fabiao{
-   margin: 0;
-   padding: 0;
-   padding-left: 10px;
+
+ .artic{
    margin-top: 10px;
+   font-size: 14px;
    color: #555;
+   padding: 10px;
+   text-indent: 2em;
  }
- 
 </style>

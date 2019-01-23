@@ -8,7 +8,7 @@
       <van-tabbar v-model="active">
           <van-tabbar-item to="/home" icon="home-o">首页</van-tabbar-item>
           <van-tabbar-item to="/member" icon="user-o" >会员</van-tabbar-item>
-          <van-tabbar-item to="/cart" icon="shopping-cart-o" info="5">购物车</van-tabbar-item>
+          <van-tabbar-item to="/cart" icon="shopping-cart-o" id="cart" :info="$store.getters.getAllCount">购物车</van-tabbar-item>
           <van-tabbar-item to="/search" icon="search" dot>搜索</van-tabbar-item>
       </van-tabbar>
   </div>
@@ -24,8 +24,11 @@ export default {
   methods:{
     onClickLeft(){
       // Toast('hello')
-      window.history.go(-1);
+      // window.history.go(-1);
+      this.$router.go(-1)
     }
+  },
+  components:{
   }
 }
 </script>

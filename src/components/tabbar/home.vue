@@ -1,23 +1,21 @@
 <template>
   <div>
-    <van-swipe :autoplay="3000" indicator-color="white" class="van-swipe">
-      <van-swipe-item v-for="item in imgList" :key="item.img" class="demo-swipe">
-        <img :src="item.img" alt>
-      </van-swipe-item>
-    </van-swipe>
+   <Swiper :imgList='imgList'></Swiper>
     <Gird></Gird>
     
   </div>
 </template>
 
 <script>
-import Gird from '../subcomponents/Gird'
+import Gird from '../subcomponents/news/Gird'
+import Swiper from '../subcomponents/news/Swiper'
 export default {
   data: () => ({
     imgList: []
   }),
   components:{
-    Gird
+    Gird,
+    Swiper
   }
   ,
   created() {

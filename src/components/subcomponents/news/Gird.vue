@@ -6,7 +6,6 @@
       </i>
       <span>{{item.title}}</span>
     </router-link>
-  
   </div>
 </template>
 
@@ -15,8 +14,8 @@ export default {
   data: () => ({
     list:[
       {id:'1',path:'/home/newslist',title:'定位服务',imgUrl:'static/gird/menu1.png'},
-      {id:'2',path:'',title:'点餐服务',imgUrl:'static/gird/menu2.png'},
-      {id:'3',path:'',title:'商品管理',imgUrl:'static/gird/menu3.png'},
+      {id:'2',path:'/home/photos',title:'点餐服务',imgUrl:'static/gird/menu2.png'},
+      {id:'3',path:'/home/goodslist',title:'商品管理',imgUrl:'static/gird/menu3.png'},
       {id:'4',path:'',title:'充值服务',imgUrl:'static/gird/menu4.png'},
       {id:'5',path:'',title:'精彩点评',imgUrl:'static/gird/menu5.png'},
       {id:'6',path:'',title:'菜单分类',imgUrl:'static/gird/menu6.png'},
@@ -55,7 +54,8 @@ export default {
   padding: 0 5px;
   font-size: 15px;
   font-family: '楷体';
-  line-height: 14px;
+  line-height: 13px;
+  color: #555;
 }
 
 .demo-icon .van-icon {
